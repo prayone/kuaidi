@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="">
+    <radio-group class="radio-group redi" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+      <radio value="{{item.name}}" checked="{{item.checked}}"/>
+         {{item.value}}
+    </label>
+    </radio-group>
+    <input placeholder='请输入运单号' bindinput='numInfo'/>
+      <scroll-view scroll-y style="height: 300px;" >
+          <view wx:for="{{resData.result.list}}" class='mar'>
+            {{item.datetime}}:{{item.remark}}
+          </view>
+      </scroll-view>
+      <button type="primary"  bindtap="clickxc" style='width:90px;            margin-top:10px;'>查询 </button>
+</view>
